@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>vs</ProjectName>
+    <ProjectGuid>{4A6BF1B1-C645-4BAD-A9B7-7B6E3DB67B2C}</ProjectGuid>
+    <RootNamespace>vs2008</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.32203.90</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\rt-thread\components\dfs\filesystems\devfs;..\rt-thread\components\dfs\filesystems\elmfat;..\rt-thread\components\dfs\include;..\rt-thread\components\drivers\include;..\rt-thread\components\finsh;..\rt-thread\components\libc\compilers\common\extension;..\rt-thread\components\libc\compilers\common\extension\fcntl\msvc;..\rt-thread\components\libc\compilers\common\include;..\rt-thread\components\libc\posix\io\poll;..\rt-thread\components\libc\posix\io\stdio;..\rt-thread\components\libc\posix\ipc;..\rt-thread\components\net\netdev\include;..\rt-thread\components\net\sal\include;..\rt-thread\components\net\sal\include\dfs_net;..\rt-thread\components\net\sal\include\socket;..\rt-thread\components\net\sal\include\socket\sys_socket;..\rt-thread\include;..\rt-thread\libcpu\sim\win32;SDL2\include;applications;applications\lvgl;applications\lvgl\demo;drivers;packages\LVGL-latest\env_support\rt-thread;packages\LVGL-latest\src;packages\LVGL-latest\src\core;packages\LVGL-latest\src\draw;packages\LVGL-latest\src\draw\arm2d;packages\LVGL-latest\src\draw\nxp;packages\LVGL-latest\src\draw\nxp\pxp;packages\LVGL-latest\src\draw\nxp\vglite;packages\LVGL-latest\src\draw\sdl;packages\LVGL-latest\src\draw\stm32_dma2d;packages\LVGL-latest\src\draw\sw;packages\LVGL-latest\src\draw\swm341_dma2d;packages\LVGL-latest\src\extra;packages\LVGL-latest\src\extra\layouts;packages\LVGL-latest\src\extra\layouts\flex;packages\LVGL-latest\src\extra\layouts\grid;packages\LVGL-latest\src\extra\libs;packages\LVGL-latest\src\extra\libs\bmp;packages\LVGL-latest\src\extra\libs\ffmpeg;packages\LVGL-latest\src\extra\libs\freetype;packages\LVGL-latest\src\extra\libs\fsdrv;packages\LVGL-latest\src\extra\libs\gif;packages\LVGL-latest\src\extra\libs\png;packages\LVGL-latest\src\extra\libs\qrcode;packages\LVGL-latest\src\extra\libs\rlottie;packages\LVGL-latest\src\extra\libs\sjpg;packages\LVGL-latest\src\extra\others;packages\LVGL-latest\src\extra\others\fragment;packages\LVGL-latest\src\extra\others\gridnav;packages\LVGL-latest\src\extra\others\ime;packages\LVGL-latest\src\extra\others\imgfont;packages\LVGL-latest\src\extra\others\monkey;packages\LVGL-latest\src\extra\others\msg;packages\LVGL-latest\src\extra\others\snapshot;packages\LVGL-latest\src\extra\themes;packages\LVGL-latest\src\extra\themes\basic;packages\LVGL-latest\src\extra\themes\default;packages\LVGL-latest\src\extra\themes\mono;packages\LVGL-latest\src\extra\widgets;packages\LVGL-latest\src\extra\widgets\animimg;packages\LVGL-latest\src\extra\widgets\calendar;packages\LVGL-latest\src\extra\widgets\chart;packages\LVGL-latest\src\extra\widgets\colorwheel;packages\LVGL-latest\src\extra\widgets\imgbtn;packages\LVGL-latest\src\extra\widgets\keyboard;packages\LVGL-latest\src\extra\widgets\led;packages\LVGL-latest\src\extra\widgets\list;packages\LVGL-latest\src\extra\widgets\menu;packages\LVGL-latest\src\extra\widgets\meter;packages\LVGL-latest\src\extra\widgets\msgbox;packages\LVGL-latest\src\extra\widgets\span;packages\LVGL-latest\src\extra\widgets\spinbox;packages\LVGL-latest\src\extra\widgets\spinner;packages\LVGL-latest\src\extra\widgets\tabview;packages\LVGL-latest\src\extra\widgets\tileview;packages\LVGL-latest\src\extra\widgets\win;packages\LVGL-latest\src\font;packages\LVGL-latest\src\hal;packages\LVGL-latest\src\misc;packages\LVGL-latest\src\widgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MinimalRebuild>true</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>RT_USING_LIBC;_CRT_DECLARE_NONSTDC_NAMES=0;_CRT_ERRNO_DEFINED;_CRT_NO_TIME_T;_CRT_SECURE_NO_WARNINGS;NORESOURCE;WIN32_LEAN_AND_MEAN;__RTTHREAD__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\rt-thread\components\dfs\filesystems\devfs\devfs.c" />
+    <ClCompile Include="..\rt-thread\components\dfs\filesystems\elmfat\dfs_elm.c" />
+    <ClCompile Include="..\rt-thread\components\dfs\filesystems\elmfat\ff.c" />
+    <ClCompile Include="..\rt-thread\components\dfs\filesystems\elmfat\ffunicode.c" />
+    <ClCompile Include="..\rt-thread\components\dfs\src\dfs.c" />
+    <ClCompile Include="..\rt-thread\components\dfs\src\dfs_file.c" />
+    <ClCompile Include="..\rt-thread\components\dfs\src\dfs_fs.c" />
+    <ClCompile Include="..\rt-thread\components\dfs\src\dfs_posix.c" />
+    <ClCompile Include="..\rt-thread\components\drivers\ipc\completion.c" />
+    <ClCompile Include="..\rt-thread\components\drivers\ipc\dataqueue.c" />
+    <ClCompile Include="..\rt-thread\components\drivers\ipc\pipe.c" />
+    <ClCompile Include="..\rt-thread\components\drivers\ipc\ringblk_buf.c" />
+    <ClCompile Include="..\rt-thread\components\drivers\ipc\ringbuffer.c" />
+    <ClCompile Include="..\rt-thread\components\drivers\ipc\waitqueue.c" />
+    <ClCompile Include="..\rt-thread\components\drivers\ipc\workqueue.c" />
+    <ClCompile Include="..\rt-thread\components\drivers\rtc\rtc.c" />
+    <ClCompile Include="..\rt-thread\components\drivers\serial\serial.c" />
+    <ClCompile Include="..\rt-thread\components\finsh\cmd.c" />
+    <ClCompile Include="..\rt-thread\components\finsh\msh.c" />
+    <ClCompile Include="..\rt-thread\components\finsh\msh_file.c" />
+    <ClCompile Include="..\rt-thread\components\finsh\msh_parse.c" />
+    <ClCompile Include="..\rt-thread\components\finsh\shell.c" />
+    <ClCompile Include="..\rt-thread\components\libc\compilers\common\cctype.c" />
+    <ClCompile Include="..\rt-thread\components\libc\compilers\common\cstdio.c" />
+    <ClCompile Include="..\rt-thread\components\libc\compilers\common\cstdlib.c" />
+    <ClCompile Include="..\rt-thread\components\libc\compilers\common\cstring.c" />
+    <ClCompile Include="..\rt-thread\components\libc\compilers\common\ctime.c" />
+    <ClCompile Include="..\rt-thread\components\libc\compilers\common\cwchar.c" />
+    <ClCompile Include="..\rt-thread\components\libc\posix\io\poll\poll.c" />
+    <ClCompile Include="..\rt-thread\components\libc\posix\io\poll\select.c" />
+    <ClCompile Include="..\rt-thread\components\net\netdev\src\netdev.c" />
+    <ClCompile Include="..\rt-thread\components\net\netdev\src\netdev_ipaddr.c" />
+    <ClCompile Include="..\rt-thread\components\net\sal\dfs_net\dfs_net.c" />
+    <ClCompile Include="..\rt-thread\components\net\sal\socket\net_netdb.c" />
+    <ClCompile Include="..\rt-thread\components\net\sal\socket\net_sockets.c" />
+    <ClCompile Include="..\rt-thread\components\net\sal\src\sal_socket.c" />
+    <ClCompile Include="..\rt-thread\libcpu\sim\win32\cpu_port.c" />
+    <ClCompile Include="..\rt-thread\libcpu\sim\win32\startup.c" />
+    <ClCompile Include="..\rt-thread\src\clock.c" />
+    <ClCompile Include="..\rt-thread\src\device.c" />
+    <ClCompile Include="..\rt-thread\src\idle.c" />
+    <ClCompile Include="..\rt-thread\src\ipc.c" />
+    <ClCompile Include="..\rt-thread\src\irq.c" />
+    <ClCompile Include="..\rt-thread\src\kservice.c" />
+    <ClCompile Include="..\rt-thread\src\mem.c" />
+    <ClCompile Include="..\rt-thread\src\mempool.c" />
+    <ClCompile Include="..\rt-thread\src\object.c" />
+    <ClCompile Include="..\rt-thread\src\scheduler.c" />
+    <ClCompile Include="..\rt-thread\src\thread.c" />
+    <ClCompile Include="..\rt-thread\src\timer.c" />
+    <ClCompile Include="applications\application.c" />
+    <ClCompile Include="applications\lvgl\demo\lv_demo.c" />
+    <ClCompile Include="applications\lvgl\lv_port_disp.c" />
+    <ClCompile Include="applications\lvgl\lv_port_indev.c" />
+    <ClCompile Include="applications\lvgl\win32drv.c" />
+    <ClCompile Include="applications\mnt.c" />
+    <ClCompile Include="applications\platform.c" />
+    <ClCompile Include="drivers\board.c" />
+    <ClCompile Include="drivers\dfs_win32.c" />
+    <ClCompile Include="drivers\drv_rtc.c" />
+    <ClCompile Include="drivers\sd_sim.c" />
+    <ClCompile Include="drivers\uart_console.c" />
+    <ClCompile Include="drivers\winsock\drv_win_eth.c" />
+    <ClCompile Include="drivers\winsock\sal_winsock.c" />
+    <ClCompile Include="packages\LVGL-latest\env_support\rt-thread\lv_rt_thread_port.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_disp.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_event.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_group.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_indev.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_indev_scroll.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_obj.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_obj_class.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_obj_draw.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_obj_pos.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_obj_scroll.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_obj_style.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_obj_style_gen.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_obj_tree.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_refr.c" />
+    <ClCompile Include="packages\LVGL-latest\src\core\lv_theme.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\arm2d\lv_gpu_arm2d.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\lv_draw.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\lv_draw_arc.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\lv_draw_img.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\lv_draw_label.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\lv_draw_layer.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\lv_draw_line.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\lv_draw_mask.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\lv_draw_rect.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\lv_draw_transform.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\lv_draw_triangle.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\lv_img_buf.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\lv_img_cache.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\lv_img_decoder.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\nxp\lv_gpu_nxp.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\nxp\pxp\lv_draw_pxp_blend.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\nxp\pxp\lv_gpu_nxp_pxp.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\nxp\pxp\lv_gpu_nxp_pxp_osa.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\nxp\vglite\lv_draw_vglite_arc.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\nxp\vglite\lv_draw_vglite_blend.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\nxp\vglite\lv_draw_vglite_rect.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\nxp\vglite\lv_gpu_nxp_vglite.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_arc.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_bg.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_composite.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_img.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_label.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_layer.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_line.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_mask.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_polygon.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_rect.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_stack_blur.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_texture_cache.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_utils.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\stm32_dma2d\lv_gpu_stm32_dma2d.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\swm341_dma2d\lv_gpu_swm341_dma2d.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_arc.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_blend.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_dither.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_gradient.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_img.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_layer.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_letter.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_line.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_polygon.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_rect.c" />
+    <ClCompile Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_transform.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\layouts\flex\lv_flex.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\layouts\grid\lv_grid.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\bmp\lv_bmp.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\ffmpeg\lv_ffmpeg.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\freetype\lv_freetype.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\fsdrv\lv_fs_fatfs.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\fsdrv\lv_fs_posix.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\fsdrv\lv_fs_stdio.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\fsdrv\lv_fs_win32.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\gif\gifdec.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\gif\lv_gif.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\png\lodepng.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\png\lv_png.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\qrcode\lv_qrcode.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\qrcode\qrcodegen.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\rlottie\lv_rlottie.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\sjpg\lv_sjpg.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\libs\sjpg\tjpgd.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\lv_extra.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\others\fragment\lv_fragment.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\others\fragment\lv_fragment_manager.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\others\gridnav\lv_gridnav.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\others\ime\lv_ime_pinyin.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\others\imgfont\lv_imgfont.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\others\monkey\lv_monkey.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\others\msg\lv_msg.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\others\snapshot\lv_snapshot.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\themes\basic\lv_theme_basic.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\themes\default\lv_theme_default.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\themes\mono\lv_theme_mono.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\animimg\lv_animimg.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\calendar\lv_calendar.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\calendar\lv_calendar_header_arrow.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\calendar\lv_calendar_header_dropdown.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\chart\lv_chart.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\colorwheel\lv_colorwheel.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\imgbtn\lv_imgbtn.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\keyboard\lv_keyboard.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\led\lv_led.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\list\lv_list.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\menu\lv_menu.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\meter\lv_meter.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\msgbox\lv_msgbox.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\span\lv_span.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\spinbox\lv_spinbox.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\spinner\lv_spinner.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\tabview\lv_tabview.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\tileview\lv_tileview.c" />
+    <ClCompile Include="packages\LVGL-latest\src\extra\widgets\win\lv_win.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_dejavu_16_persian_hebrew.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_fmt_txt.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_loader.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_10.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_12.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_12_subpx.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_14.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_16.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_18.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_20.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_22.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_24.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_26.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_28.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_28_compressed.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_30.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_32.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_34.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_36.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_38.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_40.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_42.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_44.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_46.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_48.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_montserrat_8.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_simsun_16_cjk.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_unscii_16.c" />
+    <ClCompile Include="packages\LVGL-latest\src\font\lv_font_unscii_8.c" />
+    <ClCompile Include="packages\LVGL-latest\src\hal\lv_hal_disp.c" />
+    <ClCompile Include="packages\LVGL-latest\src\hal\lv_hal_indev.c" />
+    <ClCompile Include="packages\LVGL-latest\src\hal\lv_hal_tick.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_anim.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_anim_timeline.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_area.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_async.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_bidi.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_color.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_fs.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_gc.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_ll.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_log.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_lru.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_math.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_mem.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_printf.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_style.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_style_gen.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_templ.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_timer.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_tlsf.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_txt.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_txt_ap.c" />
+    <ClCompile Include="packages\LVGL-latest\src\misc\lv_utils.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_arc.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_bar.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_btn.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_btnmatrix.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_canvas.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_checkbox.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_dropdown.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_img.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_label.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_line.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_objx_templ.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_roller.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_slider.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_switch.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_table.c" />
+    <ClCompile Include="packages\LVGL-latest\src\widgets\lv_textarea.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_btn_list_pause.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_btn_list_play.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_btn_loop.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_btn_next.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_btn_pause.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_btn_play.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_btn_prev.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_btn_rnd.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_corner_left.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_corner_right.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_cover_1.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_cover_2.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_cover_3.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_icon_1.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_icon_2.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_icon_3.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_icon_4.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_list_border.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_logo.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_slider_knob.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_wave_bottom.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\assets\img_lv_demo_rtt_music_wave_top.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\lv_demo_rtt_music.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\lv_demo_rtt_music_list.c" />
+    <ClCompile Include="packages\lv_music_demo-latest\lv_demo_rtt_music_main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="SDL2\lib\x86\SDL2.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\rt-thread\components\dfs\filesystems\devfs\devfs.h" />
+    <ClInclude Include="..\rt-thread\components\dfs\filesystems\elmfat\diskio.h" />
+    <ClInclude Include="..\rt-thread\components\dfs\filesystems\elmfat\ff.h" />
+    <ClInclude Include="..\rt-thread\components\dfs\filesystems\elmfat\ffconf.h" />
+    <ClInclude Include="..\rt-thread\components\dfs\include\dfs.h" />
+    <ClInclude Include="..\rt-thread\components\dfs\include\dfs_file.h" />
+    <ClInclude Include="..\rt-thread\components\dfs\include\dfs_fs.h" />
+    <ClInclude Include="..\rt-thread\components\dfs\include\dfs_private.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\adc.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\alarm.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\audio.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\can.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\cputime.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\crypto.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\dac.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\hwtimer.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\i2c-bit-ops.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\i2c.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\i2c_dev.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\lptimer.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\mmcsd_card.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\mmcsd_cmd.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\mmcsd_core.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\mmcsd_host.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\mtd_nand.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\mtd_nor.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\phy.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\phy_mdio.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\pin.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\pm.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\pulse_encoder.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\rtc.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\rt_drv_pwm.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\rt_inputcapture.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\sd.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\sdio.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\sdio_func_ids.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\sensor.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\serial.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\serial_v2.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\spi.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\usb_common.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\usb_device.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\usb_host.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\watchdog.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\drivers\wlan.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\ipc\completion.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\ipc\dataqueue.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\ipc\pipe.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\ipc\poll.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\ipc\ringblk_buf.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\ipc\ringbuffer.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\ipc\waitqueue.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\ipc\workqueue.h" />
+    <ClInclude Include="..\rt-thread\components\drivers\include\rtdevice.h" />
+    <ClInclude Include="..\rt-thread\components\finsh\finsh.h" />
+    <ClInclude Include="..\rt-thread\components\finsh\msh.h" />
+    <ClInclude Include="..\rt-thread\components\finsh\shell.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\extension\fcntl\msvc\fcntl.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\extension\sys\errno.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\extension\sys\stat.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\extension\sys\types.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\include\dirent.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\include\posix\ctype.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\include\posix\stdio.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\include\posix\string.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\include\posix\wchar.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\include\sys\ioctl.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\include\sys\select.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\include\sys\signal.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\include\sys\statfs.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\include\sys\time.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\include\sys\unistd.h" />
+    <ClInclude Include="..\rt-thread\components\libc\compilers\common\include\unistd.h" />
+    <ClInclude Include="..\rt-thread\components\libc\posix\io\poll\poll.h" />
+    <ClInclude Include="..\rt-thread\components\libc\posix\io\stdio\libc.h" />
+    <ClInclude Include="..\rt-thread\components\libc\posix\ipc\semaphore.h" />
+    <ClInclude Include="..\rt-thread\components\net\netdev\include\arpa\inet.h" />
+    <ClInclude Include="..\rt-thread\components\net\netdev\include\netdev.h" />
+    <ClInclude Include="..\rt-thread\components\net\netdev\include\netdev_ipaddr.h" />
+    <ClInclude Include="..\rt-thread\components\net\sal\include\dfs_net\dfs_net.h" />
+    <ClInclude Include="..\rt-thread\components\net\sal\include\sal_low_lvl.h" />
+    <ClInclude Include="..\rt-thread\components\net\sal\include\sal_netdb.h" />
+    <ClInclude Include="..\rt-thread\components\net\sal\include\sal_socket.h" />
+    <ClInclude Include="..\rt-thread\components\net\sal\include\sal_tls.h" />
+    <ClInclude Include="..\rt-thread\components\net\sal\include\socket\netdb.h" />
+    <ClInclude Include="..\rt-thread\components\net\sal\include\socket\sys_socket\sys\socket.h" />
+    <ClInclude Include="..\rt-thread\include\rtdbg.h" />
+    <ClInclude Include="..\rt-thread\include\rtdebug.h" />
+    <ClInclude Include="..\rt-thread\include\rtdef.h" />
+    <ClInclude Include="..\rt-thread\include\rthw.h" />
+    <ClInclude Include="..\rt-thread\include\rtm.h" />
+    <ClInclude Include="..\rt-thread\include\rtservice.h" />
+    <ClInclude Include="..\rt-thread\include\rtthread.h" />
+    <ClInclude Include="..\rt-thread\libcpu\sim\win32\cpu_port.h" />
+    <ClInclude Include="applications\lvgl\lv_conf.h" />
+    <ClInclude Include="applications\lvgl\win32drv.h" />
+    <ClInclude Include="drivers\board.h" />
+    <ClInclude Include="drivers\uart_console.h" />
+    <ClInclude Include="drivers\winsock\rtt_winsock.h" />
+    <ClInclude Include="packages\LVGL-latest\env_support\rt-thread\lv_rt_thread_conf.h" />
+    <ClInclude Include="packages\LVGL-latest\lvgl.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_disp.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_event.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_group.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_indev.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_indev_scroll.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_obj.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_obj_class.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_obj_draw.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_obj_pos.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_obj_scroll.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_obj_style.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_obj_style_gen.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_obj_tree.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_refr.h" />
+    <ClInclude Include="packages\LVGL-latest\src\core\lv_theme.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\arm2d\lv_gpu_arm2d.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\lv_draw.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\lv_draw_arc.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\lv_draw_img.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\lv_draw_label.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\lv_draw_layer.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\lv_draw_line.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\lv_draw_mask.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\lv_draw_rect.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\lv_draw_transform.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\lv_draw_triangle.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\lv_img_buf.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\lv_img_cache.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\lv_img_decoder.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\nxp\lv_gpu_nxp.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\nxp\pxp\lv_draw_pxp_blend.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\nxp\pxp\lv_gpu_nxp_pxp.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\nxp\pxp\lv_gpu_nxp_pxp_osa.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\nxp\vglite\lv_draw_vglite_arc.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\nxp\vglite\lv_draw_vglite_blend.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\nxp\vglite\lv_draw_vglite_rect.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\nxp\vglite\lv_gpu_nxp_vglite.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_composite.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_img.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_layer.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_mask.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_priv.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_rect.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_stack_blur.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_texture_cache.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sdl\lv_draw_sdl_utils.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\stm32_dma2d\lv_gpu_stm32_dma2d.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\swm341_dma2d\lv_gpu_swm341_dma2d.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_blend.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_dither.h" />
+    <ClInclude Include="packages\LVGL-latest\src\draw\sw\lv_draw_sw_gradient.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\layouts\flex\lv_flex.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\layouts\grid\lv_grid.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\layouts\lv_layouts.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\bmp\lv_bmp.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\ffmpeg\lv_ffmpeg.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\freetype\lv_freetype.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\fsdrv\lv_fsdrv.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\gif\gifdec.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\gif\lv_gif.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\lv_libs.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\png\lodepng.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\png\lv_png.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\qrcode\lv_qrcode.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\qrcode\qrcodegen.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\rlottie\lv_rlottie.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\sjpg\lv_sjpg.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\sjpg\tjpgd.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\libs\sjpg\tjpgdcnf.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\lv_extra.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\others\fragment\lv_fragment.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\others\gridnav\lv_gridnav.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\others\ime\lv_ime_pinyin.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\others\imgfont\lv_imgfont.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\others\lv_others.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\others\monkey\lv_monkey.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\others\msg\lv_msg.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\others\snapshot\lv_snapshot.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\themes\basic\lv_theme_basic.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\themes\default\lv_theme_default.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\themes\lv_themes.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\themes\mono\lv_theme_mono.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\animimg\lv_animimg.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\calendar\lv_calendar.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\calendar\lv_calendar_header_arrow.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\calendar\lv_calendar_header_dropdown.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\chart\lv_chart.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\colorwheel\lv_colorwheel.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\imgbtn\lv_imgbtn.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\keyboard\lv_keyboard.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\led\lv_led.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\list\lv_list.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\lv_widgets.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\menu\lv_menu.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\meter\lv_meter.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\msgbox\lv_msgbox.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\span\lv_span.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\spinbox\lv_spinbox.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\spinner\lv_spinner.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\tabview\lv_tabview.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\tileview\lv_tileview.h" />
+    <ClInclude Include="packages\LVGL-latest\src\extra\widgets\win\lv_win.h" />
+    <ClInclude Include="packages\LVGL-latest\src\font\lv_font.h" />
+    <ClInclude Include="packages\LVGL-latest\src\font\lv_font_fmt_txt.h" />
+    <ClInclude Include="packages\LVGL-latest\src\font\lv_font_loader.h" />
+    <ClInclude Include="packages\LVGL-latest\src\font\lv_symbol_def.h" />
+    <ClInclude Include="packages\LVGL-latest\src\hal\lv_hal.h" />
+    <ClInclude Include="packages\LVGL-latest\src\hal\lv_hal_disp.h" />
+    <ClInclude Include="packages\LVGL-latest\src\hal\lv_hal_indev.h" />
+    <ClInclude Include="packages\LVGL-latest\src\hal\lv_hal_tick.h" />
+    <ClInclude Include="packages\LVGL-latest\src\lvgl.h" />
+    <ClInclude Include="packages\LVGL-latest\src\lv_api_map.h" />
+    <ClInclude Include="packages\LVGL-latest\src\lv_conf_internal.h" />
+    <ClInclude Include="packages\LVGL-latest\src\lv_conf_kconfig.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_anim.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_anim_timeline.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_area.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_assert.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_async.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_bidi.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_color.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_fs.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_gc.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_ll.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_log.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_lru.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_math.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_mem.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_printf.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_style.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_style_gen.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_timer.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_tlsf.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_txt.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_txt_ap.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_types.h" />
+    <ClInclude Include="packages\LVGL-latest\src\misc\lv_utils.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_arc.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_bar.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_btn.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_btnmatrix.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_canvas.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_checkbox.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_dropdown.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_img.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_label.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_line.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_roller.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_slider.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_switch.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_table.h" />
+    <ClInclude Include="packages\LVGL-latest\src\widgets\lv_textarea.h" />
+    <ClInclude Include="packages\lv_music_demo-latest\assets\spectrum_1.h" />
+    <ClInclude Include="packages\lv_music_demo-latest\assets\spectrum_2.h" />
+    <ClInclude Include="packages\lv_music_demo-latest\assets\spectrum_3.h" />
+    <ClInclude Include="packages\lv_music_demo-latest\lv_demo_rtt_music.h" />
+    <ClInclude Include="packages\lv_music_demo-latest\lv_demo_rtt_music_list.h" />
+    <ClInclude Include="packages\lv_music_demo-latest\lv_demo_rtt_music_main.h" />
+    <ClInclude Include="rtconfig.h" />
+    <ClInclude Include="rtconfig_project.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
