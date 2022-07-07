@@ -51,4 +51,5 @@ UpgradeLog*
 *.filters
 .vs
 packages
+project.vcproj
 
